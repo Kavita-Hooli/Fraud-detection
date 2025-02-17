@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        .result {
+            font-size: 1.5rem;
+            color: #555;
+            margin-top: 20px;
+        }
+        .fraud {
+            color: red;
+            font-weight: bold;
+        }
+        .not-fraud {
+            color: green;
+            font-weight: bold;
+        }
+        .back-link {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fraud Detection Result</h1>
+        <div class="result">
+            {% if is_fraud == 'fraud' %}
+            <p class="fraud">Result: This is a fraud transaction.</p>
+            {% else %}
+            <p class="not-fraud">Result: This is not a fraud transaction.</p>
+            {% endif %}
+        </div>
+        <a href="/" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>

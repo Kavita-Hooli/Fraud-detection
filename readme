@@ -1,0 +1,11 @@
+pip install flask
+pip install werkzeug
+pip install scikit-learn
+pip install flask scikit-learn
+project/
+│
+├── app.py                # The Flask application code
+├── fraud_detection_model.pkl  # The saved model file
+├── templates/
+│   ├── index.html         # HTML file for the main page
+│   ├── predict_fraud.html # HTML file for the prediction result
